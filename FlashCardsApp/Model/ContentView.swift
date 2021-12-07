@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
    @State var currentcard: card = listOfCards.randomElement()!
+    @State var isAnswerShowing = false
     var body: some View {
         VStack( spacing: 20) {
             Text(currentcard.question)
@@ -25,6 +26,7 @@ struct ContentView: View {
             
             Text("Femur")
                 .font(.title)
+                .opacity(isAnswerShowing ? 1.0 : 0.0)
             
             Button(action: {
                 currentcard = listOfCards.randomElement()!
