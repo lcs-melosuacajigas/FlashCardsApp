@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var currentcard: card = listOfCards.randomElement()!
+   @State var currentcard: card = listOfCards.randomElement()!
     var body: some View {
         VStack( spacing: 20) {
             Text(currentcard.question)
@@ -27,7 +27,7 @@ struct ContentView: View {
                 .font(.title)
             
             Button(action: {
-                print("Button was pressed")
+                currentcard = listOfCards.randomElement()!
             }, label: {
             Text:("Check")
             })
@@ -37,7 +37,7 @@ struct ContentView: View {
             Spacer()
             }
         }
-    }
+    
 
 
 struct ContentView_Previews: PreviewProvider {
