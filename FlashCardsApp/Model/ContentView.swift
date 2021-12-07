@@ -28,10 +28,13 @@ struct ContentView: View {
                 .font(.title)
                 .opacity(isAnswerShowing ? 1.0 : 0.0)
             
+            
+            
             Button(action: {
+                isAnswerShowing = false
                 currentcard = listOfCards.randomElement()!
             }, label: {
-            Text:("Check")
+               Text("Another")
             })
                 
             }
