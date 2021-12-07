@@ -16,8 +16,13 @@ let listOfCards = {
          answer: "mitocondria")
 }
 
+
+          {
     card(question: "What is the largest bone in your body?",
      answer: "femur")
+}
 
+{
 card(question: "What is acceleration due to gravity?",
      answer: "9/80 m/s squared")
+}
