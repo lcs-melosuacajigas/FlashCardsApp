@@ -8,22 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    var currentcard: card = listOfCards.randomElement()!
     var body: some View {
-        VStack {
+        VStack( spacing: 20) {
+            Text(currentcard.question)
             Text("What is the largest bone in your body")
+                .font( .largeTitle)
             
             
             Button(action: {
-                
                 print("Button was pressed")
             }, label: {
                 Text("Check")
             })
             .buttonStyle(.bordered)
+            
+            Text("Femur")
+                .font(.title)
+            
+            Button(action: {
+                print("Button was pressed")
+            }, label: {
+            Text:("Check")
+            })
+                
+            }
+            
+            Spacer()
             }
         }
     }
-navigationTitle
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
